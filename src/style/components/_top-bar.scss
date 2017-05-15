@@ -1,0 +1,20 @@
+.top-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: 0.25s
+}
+
+.fixed-nav {
+  .top-bar {
+    background-color: rgba($dark, 0.95);
+    box-shadow: 0px 8px 16px 0px rgba($black, 0.2);
+  }
+}
+
+.no-js {
+  .top-bar {
+    background-color: rgba($dark, 0.95);
+    box-shadow: 0px 8px 16px 0px rgba($black, 0.2);
+  }
+}

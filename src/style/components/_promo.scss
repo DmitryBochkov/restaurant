@@ -1,0 +1,110 @@
+.promo {
+  display: table-cell;
+  vertical-align: middle;
+}
+.promo__inner {
+  @include pre(2 of 12);
+  @include span(9);
+  @include gutters(20px);
+
+  @include breakpoint($small) {
+    @include pre(3 of 12);
+    @include span(8);
+    @include gutters(20px);
+  }
+
+  @include breakpoint($large) {
+    @include pre(4 of 12);
+    @include span(7);
+    @include gutters(30px);
+  }
+}
+
+.promo__content {
+  text-align: center;
+}
+.promo__heading {
+  margin-bottom: 5px;
+  font-family: $secondary-font;
+  @include breakpoint($small) {
+    margin-bottom: 20px;
+  }
+  @include breakpoint($medium) {
+    margin-bottom: 30px;
+  }
+}
+.promo__lead {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-transform: uppercase;
+  @include breakpoint($small) {
+    font-size: 14px;
+  }
+  span {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background-color: $white;
+  }
+}
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 35px;
+  white-space: nowrap;
+  border-bottom: 1px solid $white;
+
+  @include breakpoint($xsmall) {
+    font-size: 50px;
+  }
+  @include breakpoint($small) {
+    font-size: 67px;
+  }
+}
+
+.promo__subtitle {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 15px 0;
+  @include breakpoint($small) {
+    font-size: 17px;
+  }
+  &:before {
+    @include pseudo;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/icons/png/world.png);
+    background-image: url(../img/icons/world.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: -25px;
+    top: 1px;
+  }
+}
+
+.promo__text {
+  margin-bottom: 10px;
+  font-size: 14px;
+  @include breakpoint($small) {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

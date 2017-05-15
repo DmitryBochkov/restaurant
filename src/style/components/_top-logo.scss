@@ -1,0 +1,13 @@
+.top-logo {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  transition: 0.25s;
+  @include breakpoint($xsmall) {
+    right: 20px;
+  }
+  img {
+    width: 180px;
+    height: auto;
+  }
+}

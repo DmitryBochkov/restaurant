@@ -1,0 +1,39 @@
+.services {
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  color: $white;
+}
+.no-js {
+  .services__items {
+    @include clearfix;
+  }
+}
+
+$decor-color: $light-grey;
+.btn--services {
+  margin: 0;
+  background-color: $decor-color;
+  color: $dark;
+  box-shadow: 0 4px darken($decor-color, 15);
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px darken($decor-color, 15);
+  }
+  &:active {
+    box-shadow: 0 0 darken($decor-color, 15);
+  }
+}
+
+.prev--services,
+.next--services {
+  width: 50px;
+  height: 100%;
+  background-color: rgba($light-grey, 0.15);
+  transition: 0.25s;
+
+  &:hover {
+    background-color: rgba($light-grey, 0.35);
+
+  }
+}

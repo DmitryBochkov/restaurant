@@ -1,0 +1,136 @@
+.main-footer {
+  position: relative;
+  padding: 50px 0;
+  background-color: $brown;
+  color: $white;
+  font-size: 14px;
+
+  @include breakpoint($large) {
+    padding: 80px 0;
+  }
+}
+
+.main-footer__column {
+  margin: 20px 0;
+  @include span(12);
+  @include gutters(20px);
+
+  @include breakpoint($large) {
+    @include gutters(30px);
+  }
+}
+.main-footer__column--social {
+  @include breakpoint($medium) {
+    @include span(4);
+  }
+  @include breakpoint($large) {
+    @include span(2);
+  }
+
+  p {
+    margin: 15px 0;
+    text-align: center;
+    color: $grey;
+    font-size: 14px;
+  }
+
+  .social--main-footer {
+    width: 100%;
+  }
+  .social__items {
+    width: 100%;
+    text-align: center;
+  }
+  .social__item {
+    margin: 5px;
+    @include breakpoint($xsmall) {
+      margin: 10px;
+    }
+    @include breakpoint($small) {
+      margin: 5px;
+    }
+    @include breakpoint($large) {
+      margin: 15px;
+    }
+  }
+}
+.main-footer__column--menu {
+  @include breakpoint($medium) {
+    @include span(4);
+  }
+  @include breakpoint($large) {
+    @include span(3);
+  }
+}
+
+.menu--main-footer {
+  width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: $grey;
+  @include breakpoint($medium) {
+    width: 250px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 6px;
+    padding-left: 40px;
+    color: inherit;
+    text-decoration: underline;
+    transition: all .25s ease-in;
+    &:before {
+      width: 16px;
+      height: 16px;
+      margin-top: -8px;
+      left: 12px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent;
+      &:before {
+        background-image: url(../img/icons/png/fork-and-knife-icon-accent.png);
+        background-image: url(../img/icons/fork-and-knife-icon-accent.svg);
+      }
+    }
+  }
+
+}
+.main-footer__column--contacts {
+  @include breakpoint($medium) {
+    @include span(4);
+  }
+  @include breakpoint($large) {
+    @include span(3);
+  }
+}
+.contacts--main-footer {
+  width: 100%;
+  margin: 0 auto;
+  @include breakpoint($medium) {
+    width: 250px;
+  }
+  .contacts__item {
+    p {
+      padding-left: 25px;
+      &:before {
+        position: absolute;
+      }
+    }
+  }
+}
+.main-footer__column--map {
+  @include breakpoint($large) {
+    @include span(4);
+  }
+}
+
+.main-footer__logo {
+  display: block;
+  width: 125px;
+  height: auto;
+  margin: 0 auto;
+}

@@ -1,0 +1,104 @@
+.top-header{
+	position: relative;
+	min-height: 700px;
+	height: 100%;
+	height: 100vh;
+	color: $white;
+  background-color: $dark;
+	background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+
+  > .container {
+    display: table;
+		height: 100%;
+  }
+}
+
+.btn--header {
+	margin: 5px auto;
+
+}
+
+.social--header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+.contacts--header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	border-top: 1px solid rgba($white, 0.15);
+	background-color: rgba($white, 0.1);
+
+	.contacts__item {
+		@include span(12);
+		@include gutters(20px);
+		text-align: right;
+
+		p {
+			margin: 0;
+			margin-bottom: 5px;
+
+			@include breakpoint($small) {
+				margin-top: 5px;
+			}
+			@include breakpoint($medium) {
+				margin-top: 10px;
+				margin-bottom: 15px;
+			}
+
+			span {
+				display: none;
+				@include breakpoint($large) {
+					display: inline;
+				}
+			}
+
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+	.contacts__item--address {
+		@include breakpoint($medium) {
+			@include span(5);
+			@include gutters(30px);
+		}
+		@include breakpoint($large) {
+			@include span(4);
+			@include gutters(30px);
+		}
+	}
+	.contacts__item--phone {
+		@include breakpoint($medium) {
+			@include span(3);
+			@include gutters(30px);
+			text-align: center;
+		}
+		@include breakpoint($large) {
+			@include span(4);
+			@include gutters(30px);
+		}
+	}
+	.contacts__item--hours {
+		@include breakpoint($medium) {
+			@include span(4);
+			@include gutters(30px);
+			text-align: left;
+		}
+	}
+}
+
+
+@include breakpoint($small) {
+	@include pre(3 of 12);
+	@include span(8);
+	@include gutters(20px);
+}

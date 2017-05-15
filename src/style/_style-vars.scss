@@ -1,0 +1,26 @@
+$susy: (
+  columns: 12,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$xsmall: 'screen' 480px;
+$small: 'screen' 600px;
+$medium: 'screen' 768px;
+$large: 'screen' 992px;
+$xlarge: 'screen' 1200px;
+
+$default-font: 'Open Sans', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+$accent: #f9c869;
+$blue: #6bd3cc;
+$red: #ff4f42;
+$dark: #282b2b;
+$brown: #242424;
+$white: #fff;
+$black: #000;
+$grey: #7a7777;
+$light-grey: #e3dbdb;
+$overlay: #3d3c3c;

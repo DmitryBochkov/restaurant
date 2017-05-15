@@ -1,0 +1,41 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: inherit;
+  color: $light-grey;
+}
+.menu__item {
+  a {
+    display: block;
+    position: relative;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25 ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+      &:before {
+        background-image: url(../img/icons/png/fork-and-knife-icon-white.png);
+        background-image: url(../img/icons/fork-and-knife-icon-white.svg);
+      }
+    }
+
+    &:before {
+      @include pseudo;
+      width: 18px;
+      height: 18px;
+      left: 12%;
+      top: 50%;
+      margin-top: -9px;
+      background-image: url(../img/icons/png/fork-and-knife-icon.png);
+      background-image: url(../img/icons/fork-and-knife-icon.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+    }
+  }
+}

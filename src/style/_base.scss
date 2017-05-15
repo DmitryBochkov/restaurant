@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  @include global-box-sizing(border-box);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $default-font;
+  font-weight: 400;
+	font-size: 16px;
+	line-height: 1.75;
+	opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.container {
+  position: relative;
+  @include container(90%);
+  @include gutters(20px);
+  @include breakpoint($medium) {
+    @include container(768px);
+    @include gutters(20px);
+  }
+  @include breakpoint($large) {
+    @include container(992px);
+    @include gutters(30px);
+  }
+  @include breakpoint($xlarge) {
+    @include container(1200px);
+    @include gutters(30px);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

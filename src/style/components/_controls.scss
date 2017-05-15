@@ -1,0 +1,38 @@
+.prev,
+.next {
+  position: absolute;
+  top: 0;
+  font-size: 0;
+  padding: 0;
+  background-color: $white;
+  color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+.prev {
+  left: 0;
+  background-image: url(../img/icons/png/left.png);
+  background-image: url(../img/icons/left.svg);
+}
+.next {
+  right: 0;
+  background-image: url(../img/icons/png/right.png);
+  background-image: url(../img/icons/right.svg);
+}
+button[data-action="stop"],
+button[data-action="start"] {
+  display: none !important;
+}
+
+.no-js {
+  .prev,
+  .next {
+    display: none;
+  }
+}

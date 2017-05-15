@@ -1,0 +1,83 @@
+.request {
+  position: relative;
+  color: $white;
+  background-image: url(../img/bg-5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:before {
+    @include pseudo;
+    @include overlay($bgColor: $accent, $bgOpacity: 0.98);
+    left: auto;
+    right: 0;
+    width: 100%;
+    @include breakpoint($medium) {
+      width: 50%;
+    }
+  }
+}
+.request__details {
+  @include span(12);
+  @include gutters(20px);
+
+  @include breakpoint($medium) {
+    @include span(5);
+    @include pre(7);
+    @include gutters(20px);
+  }
+  @include breakpoint($large) {
+    @include gutters(30px);
+  }
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.request__logo {
+  padding-top: 60px;
+  width: 100px;
+}
+
+.request__title {
+  @extend .section-title;
+  margin: 0;
+  color: $white;
+}
+
+.request__form {
+  padding-bottom: 60px;
+  input,
+  select {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid rgba($black, .1);
+    border-bottom: 2px solid rgba($black, .1);
+    border-radius: 2px;
+    outline: none;
+    font-size: 16px;
+    color: $white;
+  }
+  input {
+    @include input-placeholder {
+      background-color: transparent;
+      font-size: 16px;
+      color: $white;
+      opacity: 1;
+    };
+  }
+  select {
+    padding: 10px 22px;
+    margin-bottom: 30px;
+  }
+  option {
+    color: $dark;
+  }
+}
+
+.btn--request {
+  @extend .btn--services;
+}

@@ -1,0 +1,28 @@
+.top-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: -100px;
+  background-color: $grey;
+  background-image: url(../img/icons/png/arrow-up2.png);
+  background-image: url(../img/icons/arrow-up2.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 5;
+  cursor: pointer;
+  transition: all .25s ease;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    background-image: url(../img/icons/png/arrow-up2-accent.png);
+    background-image: url(../img/icons/arrow-up2-accent.svg);
+  }
+  &.active {
+    right: 25px;
+  }
+}

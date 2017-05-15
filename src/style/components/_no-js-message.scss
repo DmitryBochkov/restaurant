@@ -1,0 +1,11 @@
+.no-js-message {
+  display: none;
+  color: inherit;
+}
+.no-js {
+  .no-js-message {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+}
